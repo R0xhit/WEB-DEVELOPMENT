@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(52, 59, 61);
+    padding: 4rem;
+    display: grid;
+    row-gap: 1rem;
+    column-gap: 1rem;
+    /* grid-template-rows: 1fr 1fr; Isme btaya hai ki rows ke dimensions kya hain to create rows */
+    /* grid-template-columns: 1fr 1fr 1fr; Ye columns ke liye haii */
+
+    grid-template-rows: repeat(6,1fr); /* Repeat function ot repeat dimension */
+
+    grid-template-columns: repeat(1, 1fr);
+
+    /* Another unit for grid template can be fr(fraction). if 300px be width of webpage and we divide it in 3 fractions then each will get 100px width 1fr = 100px in this case.... */
+}
+
+.item{
+    background-color: rgb(94, 94, 194);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    /* justify-self: stretch; */ /* Cell k andr strech ho jyega */
+    /* align-self: start; */ /* Cell ke andr vertically end me aa jyega */
+    /* place-self: center; */ /* Apply to both vertical and horizontal direction */
+}
+
+/* .itemheader{
+    background-color: rgb(94, 94, 194);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.itemfooter{
+    background-color: rgb(94, 94, 194);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.itemside{
+    background-color: rgb(94, 94, 194);
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.itemcontent{
+    background-color: rgb(94, 94, 194);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+} */
+
+@media (min-width:768px) {
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .header{
+    background-color: rgb(94, 94, 194);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .footer{
+    background-color: rgb(94, 94, 194);
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .side{
+    background-color: rgb(94, 94, 194);
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .content{
+    background-color: rgb(94, 94, 194);
+    grid-column-start: 2;
+    grid-column-end: 4;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    }
+}

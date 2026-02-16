@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container{
+    background-color: antiquewhite;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.item{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(65, 65, 137);
+    border: 2px solid  black;
+}
+
+#rx:hover{
+    transform: rotateX(45deg);
+    transition-duration: 0.3s;
+}
+
+#ry:hover{
+    transform: rotateY(-45deg);
+    transition-duration: 0.3s;
+}
+
+#rz:hover{
+    transform: rotateZ(-45deg);
+    transition-duration: 0.3s;
+}
+
+
+#tx:hover{
+    transform: translateX(100px);
+    transition-duration: 0.3s;
+}
+
+#ty:hover{
+    transform: translateY(-100px);
+    transition-duration: 0.3s;
+}
+
+#tz:hover{
+    transform:perspective(300px) translateZ(-100px);
+    transition-duration: 0.3s;
+}
+
+#sx:hover{
+    transform: scaleX(1.5);
+    transition-duration: 0.3s;
+}
+
+#sy:hover{
+    transform: scaleY(1.5);
+    transition-duration: 0.3s;
+}
+
+#sz:hover{
+    transform:perspective(300px) scaleZ(5) rotateY(20deg);
+    transition-duration: 0.3s;
+}
